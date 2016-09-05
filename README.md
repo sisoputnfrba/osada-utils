@@ -4,7 +4,7 @@ Especificación y herramientas para trabajar con el FS OSADA
 
 ## Sobre este repositorio
 
-Este repositorio contendrá la definición de estructuras clave del sistema de archivos OSADA, así como las herramientas básicas que permitirán su creación e inspección (`osada-format` y `osada-dump`).
+Este repositorio contiene la definición de estructuras clave del sistema de archivos OSADA, así como las herramientas básicas que permitirán su creación e inspección (`osada-format`, y - proximamente - `osada-dump`).
 
 ## Actualizaciones
 El repositorio es un trabajo en progreso, por lo que sugerimos a los interesados suscribirse a las notificaciones del mismo mediante la herramienta [Watch](https://github.com/blog/1204-notifications-stars) de Github.
