@@ -4,7 +4,21 @@ Especificación y herramientas para trabajar con el FS OSADA
 
 ## Sobre este repositorio
 
-Este repositorio contiene la definición de estructuras clave del sistema de archivos OSADA, así como las herramientas básicas que permitirán su creación e inspección (`osada-format`, y - proximamente - `osada-dump`).
+Este repositorio contiene la definición de estructuras clave del sistema de archivos OSADA, así como las herramientas básicas que permitirán su creación e inspección (`osada-format`, y `osada-dump`).
+
+## `osada-format`
+
+`osada-format` recibe como primer parámetro la ruta a un archivo de disco y lo formatea con un filesystem OSADA limpio que ocupa todo el tamaño del archivo. El archivo **debe existir** y _tener espacio suficiente_ para almacenar un filesystem OSADA.
+
+`osada-format` imprimirá en pantalla información sobre el filesystem formateado. De momento, si el disco no tuviera tamaño suficiente para almacenar un filesystem (al menos 65972 bytes), se genera una violación de segmento.
+
+Para crear el archivo con el tamaño necesario, se puede usar el comando `truncate -s <tamaño> <ruta-del-archivo>` (por ejemplo, `truncate -s 65k disco-chico.bin`).
+
+## `osada-dump` (beta!)
+
+`osada-dump` recibe como primer parámetro un archivo de disco, e imprime toda la información que interprete del filesystem OSADA que contenga.
+
+Actualmente, el comando no está terminado - sólo muestra el header y bitmap del disco.
 
 ## Actualizaciones
 El repositorio es un trabajo en progreso, por lo que sugerimos a los interesados suscribirse a las notificaciones del mismo mediante la herramienta [Watch](https://github.com/blog/1204-notifications-stars) de Github.
