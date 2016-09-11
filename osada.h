@@ -1,5 +1,8 @@
 #include <stdint.h>
 
+#ifndef __OSADA_H__
+#define __OSADA_H__
+
 #define OSADA_BLOCK_SIZE 64
 #define OSADA_FILENAME_LENGTH 17
 
@@ -42,3 +45,5 @@ typedef struct {
 _Static_assert( sizeof(osada_file) == (sizeof(osada_block) / 2.0), "osada_file size does not half osada_block size");
 
 #pragma pack(pop)
+
+#endif __OSADA_H__
